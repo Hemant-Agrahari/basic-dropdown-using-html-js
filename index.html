@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic dropdown using html</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: whitesmoke;
+        text-align: center;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        transition: background-color 3s ease; 
+      }
+      select{
+        width: 200px;
+        height: 30px;
+        padding-inline: 12px 12px;
+        outline: none;
+        cursor: pointer;
+        /* transition: all 0.3s ease; */
+      }
+      select option{
+        cursor: pointer;
+  
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h3>Change Background Color</h2>
+      <select id="select-fruit-dropdown">
+        <option value="">Please select</option>
+        <option value="red">Red</option>
+        <option value="orange">Orange</option>
+        <option value="purple">Purple</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="pink">Pink</option>
+        <option value="brown">Brown</option>
+        <option value="gray">Gray</option>
+        <option value="white">White</option>
+      </select>
+    </form>
+
+    <script>
+      const selectDropdown = document.getElementById("select-fruit-dropdown");
+      selectDropdown.addEventListener("change", () => {
+        const value = selectDropdown.value;
+        if (value == "red") {
+          document.body.style.backgroundColor = "red";
+          document.body.style.color='white'
+        } else if (value == "orange") {
+          document.body.style.backgroundColor = "orange";
+        } else if (value == "purple") {
+          document.body.style.backgroundColor = "purple";
+        } else if (value == "green") {
+          document.body.style.backgroundColor = "green";
+        } else if (value == "blue") {
+          document.body.style.backgroundColor = "blue";
+        } else if (value == "yellow") {
+          document.body.style.backgroundColor = "yellow";
+        } else if (value == "pink") {
+          document.body.style.backgroundColor = "pink";
+        } else if (value == "brown") {
+          document.body.style.backgroundColor = "brown";
+        } else if (value == "gray") {
+          document.body.style.backgroundColor = "gray";
+        } else if (value == "white") {
+          document.body.style.backgroundColor = "white";
+        }
+      });
+    </script>
+  </body>
+</html>
